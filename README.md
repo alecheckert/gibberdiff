@@ -8,18 +8,18 @@ tracking (SPT) experiments using a finite-state mixture model.
 Each component of the mixture is a regular diffusive state, 
 characterized by a fractional occupancy and a diffusion coefficient.
 
-The goal of `gibberdiff` is to generate samples from the posterior
-distribution over the fractional occupancies and diffusion coefficients,
+`gibberdiff` generates samples from the posterior
+distribution over the occupancies and diffusion coefficients
 given some observed trajectories. `gibberdiff` can return either the
 raw samples or the estimated posterior mean.
 
 ## What doesn't it do?
 
-`gibberdiff` doesn't check the quality of the raw data. Garbage in, garbage out.
+`gibberdiff` doesn't check the quality of the raw data.
 
 `gibberdiff` doesn't decide how many states you should use.
 
-`gibberdiff` doesn't 
+`gibberdiff` doesn't decide how many iterations you should run.
 
 `gibberdiff` doesn't deal with transitions between states.
 
@@ -33,7 +33,7 @@ error of your tracking experiment.
 
 ## What goes in and what comes out?
 
-For input, `gibberdiff` expects trajectories in CSV format. Each row of the CSV
+`gibberdiff` expects trajectories in CSV format. Each row of the CSV
 should correspond to one detection in a tracking experiment. The CSV
 must contain the following columns:
 
